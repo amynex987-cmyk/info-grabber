@@ -113,13 +113,13 @@ def abt(choice2):
 
 def HELP():
      HelP = CTkToplevel(root)
-     HelP.geometry('300x150')
+     HelP.geometry('300x300')
      HelP.resizable(False, False)
      HelP.title('info grabber, help')
      HelP.attributes('-topmost', True)
-     helpH = CTkTextbox(HelP, width=300, height=150, border_color='purple', border_width=2)
+     helpH = CTkTextbox(HelP, width=300, height=300, border_color='purple', border_width=4)
      helpH.place(x=1, y=1)
-     helpH.insert('end')
+     helpH.insert('end', '2. Input: Inside the application window, click the search bar labeled "Enter URL :" and type the website address (e.g., google.com). The script automatically fixes spaces and adds http:// if missing.\n\nRun: Click the Scan button. The tool will bypass security layers like Cloudflare, scrape the site, and display technical infrastructure details inside the main black text box.\n\nWhat Every UI Element and Button Does:\n\nEnter URL : Bar: The input field where you type the target website address\nScan Button: Triggers the scraper to gather and print the following data:\nTitle: The HTML title tag of the webpage\nStatus: The HTTP status code (e.g., 200 for OK, 404 for Not Found)\nServer: The software operating the web server (e.g., Nginx, Apache, Cloudflare)\nServer Speed: The response latency time in seconds\nLatest Update: The Last-Modified header showing when the page was last updated.\nFile Type: The format of the content (e.g., text/html)\nRobots.txt: Displays True if a robots.txt file exists on the target, or False if it does not.\nIP: Resolves and displays the hosting server\'s direct  IP address')
 er = CTkEntry(root, width=560, height=30, corner_radius=20, border_color='purple', border_width=3, placeholder_text='Enter URL :', placeholder_text_color='purple', fg_color='black')
 er.place(x=20, y=45)
 
@@ -132,8 +132,8 @@ op2.place(x=560,y=10)
 ent = CTkButton(root, width=80, height=30, fg_color='black', border_color='purple', text='scan', text_color='purple', corner_radius=10, border_width=2, hover_color='gray', command=scan)
 ent.place(x=588, y=45)
 
-Help = CTkButton(root, width=80, height=30, fg_color='black', border_color='purple', text='help', text_color='purple', corner_radius=10, border_width=2, hover_color='gray', command=HE)
-
+Help = CTkButton(root, width=80, height=30, fg_color='black', border_color='purple', text='help', text_color='purple', corner_radius=10, border_width=2, hover_color='gray', command=HELP)
+Help.place(x=588, y=90)
 
 root.mainloop()
 
