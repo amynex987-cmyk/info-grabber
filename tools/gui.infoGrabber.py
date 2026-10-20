@@ -6,7 +6,7 @@ try:
     from bs4 import BeautifulSoup as bs
 
 except Exception:
-    input('some required libraries are missing. would you like install them now? (y/n)\n').strip().lower()
+    print('some required libraries are missing. would you like install them now? (y/n)\n').strip().lower()
     Q = input('').strip().lower()
     
     if Q == 'y':
