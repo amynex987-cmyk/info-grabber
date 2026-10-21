@@ -16,7 +16,7 @@ try:
 
 
 except Exception:
-      input('some required libraries are missing. would you like install them now? (y/n)').strip().lower()
+      print('some required libraries are missing. would you like install them now? (y/n)').strip().lower()
       Q = input('').strip().lower()
     
       if Q == 'y':
