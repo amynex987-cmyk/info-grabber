@@ -6,7 +6,7 @@ try:
     from bs4 import BeautifulSoup as bs
 
 except Exception:
-    print('some required libraries are missing. would you like install them now? (y/n)\n').strip().lower()
+    print('some required libraries are missing. would you like install them now? (y/n)\n')
     Q = input('').strip().lower()
     
     if Q == 'y':
@@ -81,7 +81,7 @@ def scan():
               if qrl2.status_code > 299:
                     txtbx.insert('end','robots.txt : False\n')
               if qrl2.status_code < 300:
-                    txtbx.insert('end', 'robots.txt : Ture\n')
+                    txtbx.insert('end', 'robots.txt : True\n')
         else:
               txtbx.insert('end','error')
         url = url.replace('http://', '').replace('https://', '')
@@ -101,7 +101,7 @@ def abt(choice2):
           abtnew = CTkTextbox(new, width=300, height=180, fg_color='black', bg_color='purple',border_color='purple', border_width=4)
           abtnew.place(x=1, y=1)
           abtnew.insert('end', 'A lightweight OSINT and Web Scraping utility featuring a modern Graphical User Interface (GUI). This tool is designed to safely bypass security challenges like Cloudflare to extract and analyze essential website infrastructure data, including server details, response latency, robots.txt status, and active server IP resolution.')
-     elif choice2 == 'about doveloper':
+     elif choice2 == 'about developer':
           new2 = CTkToplevel(root)
           new2.geometry('270x150')
           new2.resizable(False, False)
@@ -126,7 +126,7 @@ er.place(x=20, y=45)
 op = CTkOptionMenu(root,values=['dark', 'light', 'system'], width=50, height=18, fg_color='black', text_color='purple', button_color='purple', command=(options1), corner_radius=10, dropdown_fg_color='black', dropdown_text_color='purple', dropdown_font=('arial', 14, 'bold') , button_hover_color='gray')
 op.place(x=10, y=10)
 
-op2 = CTkOptionMenu(root, values=['about tool', 'about doveloper'], command=abt, width=45 , height=18, fg_color='black', text_color='purple', button_color='purple', corner_radius=10)
+op2 = CTkOptionMenu(root, values=['about tool', 'about developer'], command=abt, width=45 , height=18, fg_color='black', text_color='purple', button_color='purple', corner_radius=10)
 op2.place(x=560,y=10)
 
 ent = CTkButton(root, width=80, height=30, fg_color='black', border_color='purple', text='scan', text_color='purple', corner_radius=10, border_width=3, hover_color='gray', command=scan)
