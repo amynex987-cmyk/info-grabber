@@ -77,8 +77,8 @@ try:
       print(f'[purple]status :[u #4B0082] {qrl.status_code}')
       print(f'[purple]server :[u #4B0082] {qrl.headers.get('Server', '[yellow]not found')}')
       print(f'[purple]server speed :[u #4B0082] {qrl.elapsed.total_seconds()}')
-      print(f'[purple]latest update :[u #4B0082] {qrl.headers.get('Last-Modified', '[yellow]not found')}')
-      print(f'[purple]file type :[u #4B0082] {qrl.headers.get('Content-Type', '[yellow]not found')}')
+      print(f'[purple]latest update :[u #4B0082] {qrl.headers.get("Last-Modified", "[yellow]not found")}')
+      print(f'[purple]file type :[u #4B0082] {qrl.headers.get("Content-Type", "[yellow]not found")}')
 
       if not url.endswith('/'):
             url = url + '/robots.txt'
