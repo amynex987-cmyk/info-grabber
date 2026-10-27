@@ -66,8 +66,8 @@ def scan():
         status = txtbx.insert('end', f'status : {qrl.status_code}\n')
         server = txtbx.insert('end', f'server : {qrl.headers.get("Server", "not found")}\n')
         srsd = txtbx.insert('end', f'server speed : {qrl.elapsed.total_seconds()}\n')
-        ltue = txtbx.insert('end', f'latest update : {qrl.headers.get('Last-Modified', 'not found')}\n')
-        ft = txtbx.insert('end', f'file type : {qrl.headers.get('Content-Type', '[yellow]not found')}\n')
+        ltue = txtbx.insert('end', f'latest update : {qrl.headers.get("Last-Modified", "not found")}\n')
+        ft = txtbx.insert('end', f'file type : {qrl.headers.get("Content-Type", "[yellow]not found")}\n')
         if not url.endswith('/'):
               url = url + '/robots.txt'
               qrl2 = clude.get(url)
